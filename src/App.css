@@ -1,0 +1,189 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+} */
+
+/* Preloader */
+.preloader {
+  transition-delay: 6s;
+}
+
+.preloader.active {
+  height: 0%;
+  pointer-events: none;
+}
+
+.preloader .preloader__top,
+.preloader .preloader__bottom {
+  background-color: rgb(128, 128, 128);
+  transition: all 2s ease;
+  transition-delay: 5s;
+}
+
+.preloader .preloader__top.active {
+  height: 0%;
+  pointer-events: none;
+}
+
+.preloader .preloader__bottom.active {
+  height: 0%;
+  pointer-events: none;
+}
+
+.preloader .preloader__text {
+  color: #fff;
+  transition: 1s;
+  transition-delay: 4s;
+}
+
+.preloader .preloader__text.active {
+  opacity: 0;
+}
+
+.preloader .text {
+  -webkit-text-stroke: 1px blue;
+  animation: animateText 1.5s linear infinite;
+  animation-direction: alternate;
+  font-family: "Fugaz One", cursive;
+}
+
+/* Header Section */
+nav.active {
+  left: 0%;
+}
+
+.navbar .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .hamburger.active .bar:nth-child(1) {
+  opacity: 1;
+  transform: translateY(8px) rotate(135deg);
+}
+
+.navbar .hamburger.active .bar:nth-child(3) {
+  opacity: 1;
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+/* Hero Section */
+.hero {
+  background: url(/images/landingbglight.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.dark .hero {
+  background: url(/images/landingbgdark.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: typedBlink 0.7s infinite;
+  -webkit-animation: typedBlink 0.7s infinite;
+  color: var(--medium-blue);
+}
+
+.dark .typed-cursor {
+  color: var(--light-blue);
+}
+
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+
+.hero .btn::after {
+  transition: all 0.4s;
+}
+
+/* Project Section */
+.project-box img {
+  scale: 1.25;
+  filter: grayscale(0.5);
+}
+
+.project-box:hover img {
+  scale: 1;
+  filter: none;
+}
+
+/* Contact Section */
+.contact .input:placeholder-shown ~ .label,
+.contact .textarea:placeholder-shown ~ .label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px) translateY(2.4rem);
+}
+
+.contact .error {
+  color: var(--red);
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 3px;
+}
+
+#dark .contact .error {
+  color: var(--red-light);
+}
+
+.contact .btn::before {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Transitions */
+.transition-slow {
+  transition: all 0.4s;
+}
+
+.transition-normal {
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-fast {
+  transition: all 0.1s ease-in-out;
+}
+
+/* Animations */
+@keyframes typedBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typedBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateText {
+  0% {
+    -webkit-text-stroke: 1px blue;
+    color: #fff;
+  }
+  50% {
+    -webkit-text-stroke: 1px rgb(0, 0, 141);
+    color: grey;
+  }
+
+  100% {
+    -webkit-text-stroke: 1px rgb(1, 1, 64);
+    color: #000;
+  }
+}
+
