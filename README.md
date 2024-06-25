@@ -1,8 +1,7 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for a personal portfolio website. It showcases Helix Designs projects and skills, providing visitors with insights into their capabilities and experiences.
 
-Currently, two official plugins are available:
+## Credits
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a modified version of Original [@my-portfolio](https://github.com/Moyinoluwa-10/my-portfolio) by Moyinoluwa Adelowo. Special thanks to Moyinoluwa Adelowo for the amazing work on the original project.
